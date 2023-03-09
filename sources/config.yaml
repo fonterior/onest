@@ -1,11 +1,11 @@
 sources:
-  - glyphs/Onest-Black.ufo
-  - glyphs/Onest-Bold.ufo
-  - glyphs/Onest-ExtraBold.ufo
-  - glyphs/Onest-Light.ufo
-  - glyphs/Onest-Medium.ufo
-  - glyphs/Onest-Regular.ufo
-  - glyphs/Onest-Thin.ufo
+  - glyphs/Onest-Black.ufoz
+  - glyphs/Onest-Bold.ufoz
+  - glyphs/Onest-ExtraBold.ufoz
+  - glyphs/Onest-Light.ufoz
+  - glyphs/Onest-Medium.ufoz
+  - glyphs/Onest-Regular.ufoz
+  - glyphs/Onest-Thin.ufoz
 axisOrder:
   - wght
 familyName: Onest
