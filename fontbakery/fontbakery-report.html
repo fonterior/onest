@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Fontbakery Check Report</title>
+                        <style>
+                            
+            html {
+                font-family: sans-serif;
+            }
+
+            h2 {
+                margin-top: 2em;
+            }
+
+            h3 {
+                margin-bottom: 1px;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            th,
+            td {
+                border: 1px solid #ddd;
+                padding: 0.5em
+            }
+
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            tr {
+                text-align: left;
+            }
+
+            ul {
+                margin-top: 0;
+            }
+
+            .details_item {
+                list-style: none;
+                display: flex;
+                align-items: baseline;
+            }
+
+            .details_indicator {
+                flex: 0 0 5em;
+                font-weight: bold;
+                padding-right: 0.5em;
+                text-align: right;
+            }
+
+            .details_text {
+                flex: 1 0;
+            }
+            
+                        </style>
+                    </head>
+                    <body>
+                    <h1>Fontbakery Technical Report</h1>
+<div>If you think a check is flawed or have an idea for a check, please  file an issue at <a href='https://github.com/googlefonts/fontbakery/issues'>https://github.com/googlefonts/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</div>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>3</td>
+                <td>8</td>
+                <td>119</td>
+                <td>7</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>0%</td>
+                <td>2%</td>
+                <td>5%</td>
+                <td>71%</td>
+                <td>4%</td>
+                <td>54%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+<h2>&lt;Section: Google Fonts&gt; 🔥🔥⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️</h2>
+<h3>Checking OS/2 fsType does not impose restrictions.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fstype&gt;</div>
+
+<details><summary>🔥 <strong>fonts/ttf/Onest-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>In this font fsType is set to 8 meaning that:
+The font may be embedded but must only be installed temporarily on other systems.</p>
+<p>No such DRM restrictions can be enabled on the Google Fonts collection, so the fsType field must be set to zero (Installable Embedding) instead. [code: drm]</p>
+</span></li></ul></div></details>
+<h3>Checking OS/2 achVendID.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/Onest-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'NONE' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+[code: unknown]</p>
+</span></li></ul></div></details>
+<h3>Checking OS/2 usWeightClass.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/usweightclass&gt;</div>
+
+<details><summary>🔥 <strong>fonts/ttf/Onest-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2 usWeightClass is '400' when it should be '900'. [code: bad-value]</p>
+</span></li></ul></div></details>
+<h3>Check copyright namerecords match license file.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/Onest-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<h3>License URL matches License text on name table?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license_url&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/Onest-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=13] [code: http-in-description]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=14] [code: http-in-license-info]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>For now we're still accepting http URLs, but you should consider using https instead.
+[code: http]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/Onest-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h2>&lt;Section: Universal&gt; 🔥⚠️⚠️⏩⏩⏩⏩⏩ℹ️ℹ️</h2>
+<h3>Do we have the latest version of FontBakery installed?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fontbakery_version&gt;</div>
+
+<details><summary>🔥 <strong>fonts/ttf/Onest-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Current Font Bakery version is 0.8.10, while a newer 0.8.11 is already available. Please upgrade it with 'pip install -U fontbakery' [code: outdated-fontbakery]</p>
+</span></li></ul></div></details>
+<h3>Check font contains no unreachable glyphs</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/Onest-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:</p>
+<pre><code>- I_alt
+
+- K_alt
+
+- W_alt
+
+- a00E2.alt
+
+- a00E4.alt
+
+- a0103.alt
+
+- a2_alt
+
+- a_alt
+
+- alt_1
+
+- be_alt
+
+- c_alt
+
+- colon.uc
+
+- emdash.uc
+
+- endash.uc
+
+- f_alt
+
+- g_alt
+
+- hyphen.uc
+
+- i_alt
+
+- j_alt
+
+- k_alt
+
+- l2_alt
+
+- l_alt
+
+- logo
+
+- logom
+
+- map
+
+- s_alt
+
+- t0163.alt
+
+- t021b.alt
+
+- t2.alt
+
+- t_alt
+
+- tab_1
+
+- u_alt
+
+- uni00AD.uc
+
+- w_alt
+
+- y2_alt 
+
+- And y_alt
+</code></pre>
+<p>[code: unreachable-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Check if each glyph has the recommended amount of contours.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/Onest-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character (codepoint 0x00AD) which is supposed to be zero-width and invisible, and is used to mark a hyphenation possibility within a word in the absence of or overriding dictionary hyphenation. It is mostly an obsolete mechanism now, and the character is only included in fonts for legacy codepage coverage. [code: softhyphen]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: uni00AD	Contours detected: 1	Expected: 0 
+
+- And Glyph name: uni00AD	Contours detected: 1	Expected: 0
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<h2>&lt;Section: Outline Correctness Checks&gt; ⚠️⚠️</h2>
+<h3>Are there any misaligned on-curve points?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_alignment_miss&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/Onest-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
+<pre><code>* exclam (U+0021): X=212.0,Y=2.0 (should be at baseline 0?)
+
+* exclam (U+0021): X=114.5,Y=2.0 (should be at baseline 0?)
+
+* dollar (U+0024): X=258.0,Y=709.0 (should be at cap-height 708?)
+
+* dollar (U+0024): X=419.0,Y=707.0 (should be at cap-height 708?)
+
+* three (U+0033): X=401.0,Y=706.5 (should be at cap-height 708?)
+
+* eight (U+0038): X=223.0,Y=706.5 (should be at cap-height 708?)
+
+* eight (U+0038): X=405.5,Y=706.5 (should be at cap-height 708?)
+
+* question (U+003F): X=176.0,Y=706.0 (should be at cap-height 708?)
+
+* Q (U+0051): X=453.5,Y=-2.0 (should be at baseline 0?)
+
+* S (U+0053): X=245.5,Y=706.5 (should be at cap-height 708?)
+
+* asciicircum (U+005E): X=230.0,Y=709.0 (should be at cap-height 708?)
+
+* asciicircum (U+005E): X=347.0,Y=709.0 (should be at cap-height 708?)
+
+* d (U+0064): X=358.0,Y=525.5 (should be at x-height 527?)
+
+* q (U+0071): X=343.5,Y=2.0 (should be at baseline 0?)
+
+* s (U+0073): X=344.0,Y=1.0 (should be at baseline 0?)
+
+* s (U+0073): X=184.0,Y=1.0 (should be at baseline 0?)
+
+* cent (U+00A2): X=389.0,Y=1.0 (should be at baseline 0?)
+
+* cent (U+00A2): X=227.0,Y=1.0 (should be at baseline 0?)
+
+* section (U+00A7): X=388.5,Y=2.0 (should be at baseline 0?)
+
+* section (U+00A7): X=206.0,Y=1.0 (should be at baseline 0?)
+
+* dieresis (U+00A8): X=256.5,Y=708.5 (should be at cap-height 708?)
+
+* dieresis (U+00A8): X=511.5,Y=708.5 (should be at cap-height 708?)
+
+* uni00B3 (U+00B3): X=105.5,Y=708.5 (should be at cap-height 708?)
+
+* Aring (U+00C5): X=370.0,Y=968.0 (should be at ascender 970?)
+
+* Aring (U+00C5): X=370.0,Y=968.0 (should be at ascender 970?)
+
+* germandbls (U+00DF): X=468.5,Y=710.0 (should be at cap-height 708?)
+
+* atilde (U+00E3): X=364.0,Y=707.0 (should be at cap-height 708?)
+
+* atilde (U+00E3): X=364.0,Y=707.0 (should be at cap-height 708?)
+
+* aring (U+00E5): X=425.0,Y=710.0 (should be at cap-height 708?)
+
+* aring (U+00E5): X=159.0,Y=710.0 (should be at cap-height 708?)
+
+* ccedilla (U+00E7): X=226.0,Y=-2.0 (should be at baseline 0?)
+
+* ntilde (U+00F1): X=389.0,Y=707.0 (should be at cap-height 708?)
+
+* ntilde (U+00F1): X=389.0,Y=707.0 (should be at cap-height 708?)
+
+* otilde (U+00F5): X=370.0,Y=707.0 (should be at cap-height 708?)
+
+* otilde (U+00F5): X=370.0,Y=707.0 (should be at cap-height 708?)
+
+* eogonek (U+0119): X=381.0,Y=2.0 (should be at baseline 0?)
+
+* eogonek (U+0119): X=366.5,Y=-0.5 (should be at baseline 0?)
+
+* itilde (U+0129): X=210.0,Y=707.0 (should be at cap-height 708?)
+
+* itilde (U+0129): X=210.0,Y=707.0 (should be at cap-height 708?)
+
+* Sacute (U+015A): X=246.5,Y=706.5 (should be at cap-height 708?)
+
+* sacute (U+015B): X=344.0,Y=1.0 (should be at baseline 0?)
+
+* sacute (U+015B): X=184.0,Y=1.0 (should be at baseline 0?)
+
+* Scircumflex (U+015C): X=245.5,Y=706.5 (should be at cap-height 708?)
+
+* scircumflex (U+015D): X=344.0,Y=1.0 (should be at baseline 0?)
+
+* scircumflex (U+015D): X=184.0,Y=1.0 (should be at baseline 0?)
+
+* Scedilla (U+015E): X=237.5,Y=706.5 (should be at cap-height 708?)
+
+* scaron (U+0161): X=344.0,Y=1.0 (should be at baseline 0?)
+
+* scaron (U+0161): X=184.0,Y=1.0 (should be at baseline 0?)
+
+* uni0163 (U+0163): X=263.0,Y=1.0 (should be at baseline 0?)
+
+* utilde (U+0169): X=370.0,Y=707.0 (should be at cap-height 708?)
+
+* utilde (U+0169): X=370.0,Y=707.0 (should be at cap-height 708?)
+
+* uni0218 (U+0218): X=236.5,Y=706.5 (should be at cap-height 708?)
+
+* ring (U+02DA): X=449.0,Y=710.0 (should be at cap-height 708?)
+
+* ring (U+02DA): X=183.0,Y=710.0 (should be at cap-height 708?)
+
+* ogonek (U+02DB): X=308.0,Y=1.0 (should be at baseline 0?)
+
+* tilde (U+02DC): X=367.0,Y=707.0 (should be at cap-height 708?)
+
+* tilde (U+02DC): X=367.0,Y=707.0 (should be at cap-height 708?)
+
+* tildecomb (U+0303): X=-206.0,Y=707.0 (should be at cap-height 708?)
+
+* tildecomb (U+0303): X=-206.0,Y=707.0 (should be at cap-height 708?)
+
+* uni030A (U+030A): X=-157.0,Y=710.0 (should be at cap-height 708?)
+
+* uni030A (U+030A): X=-423.0,Y=710.0 (should be at cap-height 708?)
+
+* uni0312 (U+0312): X=-217.5,Y=707.5 (should be at cap-height 708?)
+
+* uni0328 (U+0328): X=-82.0,Y=1.0 (should be at baseline 0?)
+
+* uni0405 (U+0405): X=245.5,Y=706.5 (should be at cap-height 708?)
+
+* uni0417 (U+0417): X=447.0,Y=706.0 (should be at cap-height 708?)
+
+* uni0417 (U+0417): X=436.0,Y=-1.0 (should be at baseline 0?)
+
+* uni041B (U+041B): X=45.0,Y=-1.0 (should be at baseline 0?)
+
+* uni041B (U+041B): X=7.0,Y=-1.0 (should be at baseline 0?)
+
+* uni0437 (U+0437): X=365.0,Y=1.0 (should be at baseline 0?)
+
+* uni043B (U+043B): X=45.0,Y=-1.0 (should be at baseline 0?)
+
+* uni043B (U+043B): X=7.0,Y=-1.0 (should be at baseline 0?)
+
+* uni0455 (U+0455): X=344.0,Y=1.0 (should be at baseline 0?)
+
+* uni0455 (U+0455): X=184.0,Y=1.0 (should be at baseline 0?)
+
+* uni20B4 (U+20B4): X=405.0,Y=710.0 (should be at cap-height 708?)
+
+* uni20B4 (U+20B4): X=223.0,Y=1.0 (should be at baseline 0?)
+
+* uni20B4 (U+20B4): X=237.0,Y=708.5 (should be at cap-height 708?)
+
+* uni21BA (U+21BA): X=680.0,Y=-0.5 (should be at baseline 0?)
+
+* uni21BA (U+21BA): X=234.5,Y=0.5 (should be at baseline 0?)
+
+* uni21BB (U+21BB): X=272.5,Y=-1.0 (should be at baseline 0?)
+
+* uniE003 (U+E003): X=431.0,Y=706.5 (should be at cap-height 708?)
+
+* uniE008 (U+E008): X=246.0,Y=706.5 (should be at cap-height 708?) 
+
+* And uniE008 (U+E008): X=428.5,Y=706.5 (should be at cap-height 708?) [code: found-misalignments]
+</code></pre>
+</span></li></ul></div></details>
+<h3>Are any segments inordinately short?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_short_segments&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/ttf/Onest-Black.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have segments which seem very short:</p>
+<pre><code>* at (U+0040) contains a short segment B&lt;&lt;808.5,285.0&gt;-&lt;810.0,305.0&gt;-&lt;810.0,312.0&gt;&gt;
+
+* s (U+0073) contains a short segment B&lt;&lt;203.0,368.0&gt;-&lt;203.0,361.0&gt;-&lt;209.0,353.5&gt;&gt;
+
+* asciitilde (U+007E) contains a short segment B&lt;&lt;625.5,460.0&gt;-&lt;626.0,452.0&gt;-&lt;626.0,452.0&gt;&gt;
+
+* paragraph (U+00B6) contains a short segment L&lt;&lt;217.0,315.0&gt;--&lt;201.0,315.0&gt;&gt;
+
+* germandbls (U+00DF) contains a short segment B&lt;&lt;457.0,400.0&gt;-&lt;457.0,387.0&gt;-&lt;465.5,378.5&gt;&gt;
+
+* germandbls (U+00DF) contains a short segment B&lt;&lt;494.0,175.0&gt;-&lt;494.0,184.0&gt;-&lt;489.0,192.5&gt;&gt;
+
+* Eogonek (U+0118) contains a short segment B&lt;&lt;397.0,-92.0&gt;-&lt;408.0,-92.0&gt;-&lt;417.0,-89.5&gt;&gt;
+
+* Eogonek (U+0118) contains a short segment B&lt;&lt;417.0,-89.5&gt;-&lt;426.0,-87.0&gt;-&lt;435.0,-83.0&gt;&gt;
+
+* eogonek (U+0119) contains a short segment B&lt;&lt;381.0,2.0&gt;-&lt;374.0,1.0&gt;-&lt;366.5,-0.5&gt;&gt;
+
+* eogonek (U+0119) contains a short segment B&lt;&lt;366.5,-0.5&gt;-&lt;359.0,-2.0&gt;-&lt;351.0,-4.0&gt;&gt;
+
+* sacute (U+015B) contains a short segment B&lt;&lt;203.0,368.0&gt;-&lt;203.0,361.0&gt;-&lt;209.0,353.5&gt;&gt;
+
+* scircumflex (U+015D) contains a short segment B&lt;&lt;203.0,368.0&gt;-&lt;203.0,361.0&gt;-&lt;209.0,353.5&gt;&gt;
+
+* Scedilla (U+015E) contains a short segment B&lt;&lt;257.5,-109.0&gt;-&lt;240.0,-112.0&gt;-&lt;232.0,-115.0&gt;&gt;
+
+* scedilla (U+015F) contains a short segment B&lt;&lt;207.0,368.0&gt;-&lt;207.0,361.0&gt;-&lt;213.0,353.5&gt;&gt;
+
+* scaron (U+0161) contains a short segment B&lt;&lt;203.0,368.0&gt;-&lt;203.0,361.0&gt;-&lt;209.0,353.5&gt;&gt;
+
+* Uogonek (U+0172) contains a short segment B&lt;&lt;444.0,-92.0&gt;-&lt;455.0,-92.0&gt;-&lt;464.0,-89.5&gt;&gt;
+
+* Uogonek (U+0172) contains a short segment B&lt;&lt;464.0,-89.5&gt;-&lt;473.0,-87.0&gt;-&lt;482.0,-83.0&gt;&gt;
+
+* uni0219 (U+0219) contains a short segment B&lt;&lt;207.0,368.0&gt;-&lt;207.0,361.0&gt;-&lt;213.0,353.5&gt;&gt;
+
+* uni0443 (U+0443) contains a short segment L&lt;&lt;77.0,-67.0&gt;--&lt;92.0,-67.0&gt;&gt;
+
+* uni0455 (U+0455) contains a short segment B&lt;&lt;203.0,368.0&gt;-&lt;203.0,361.0&gt;-&lt;209.0,353.5&gt;&gt;
+
+* uni045E (U+045E) contains a short segment L&lt;&lt;80.0,-67.0&gt;--&lt;95.0,-67.0&gt;&gt;
+
+* uni20B4 (U+20B4) contains a short segment B&lt;&lt;429.0,347.0&gt;-&lt;419.0,341.0&gt;-&lt;412.0,337.0&gt;&gt;
+
+* uni20B4 (U+20B4) contains a short segment B&lt;&lt;255.0,229.0&gt;-&lt;246.0,223.0&gt;-&lt;242.0,214.5&gt;&gt;
+
+* uni20B4 (U+20B4) contains a short segment B&lt;&lt;242.0,214.5&gt;-&lt;238.0,206.0&gt;-&lt;238.0,198.0&gt;&gt;
+
+* uni20B4 (U+20B4) contains a short segment B&lt;&lt;169.0,337.0&gt;-&lt;176.0,341.0&gt;-&lt;186.5,348.5&gt;&gt;
+
+* uni20B4 (U+20B4) contains a short segment B&lt;&lt;186.5,348.5&gt;-&lt;197.0,356.0&gt;-&lt;206.5,362.5&gt;&gt;
+
+* uni20B4 (U+20B4) contains a short segment B&lt;&lt;206.5,362.5&gt;-&lt;216.0,369.0&gt;-&lt;218.0,370.0&gt;&gt; 
+
+* And uni20B4 (U+20B4) contains a short segment B&lt;&lt;384.0,496.5&gt;-&lt;389.0,506.0&gt;-&lt;389.0,514.0&gt;&gt; [code: found-short-segments]
+</code></pre>
+</span></li></ul></div></details>
+                    </body>
+                </html>
