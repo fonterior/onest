@@ -1,11 +1,6 @@
 sources:
-  - Onest-Black.glyphs
-  - Onest-Bold.glyphs
-  - Onest-ExtraBold.glyphs
-  - Onest-Light.glyphs
-  - Onest-Medium.glyphs
-  - Onest-Regular.glyphs
-  - Onest-Thin.glyphs
+  - Onest-Black.ufoz
+
 axisOrder:
   - wght
 familyName: Onest
