@@ -1,7 +1,11 @@
 sources:
   - Onest-Black.ufo
-
-
+  - Onest-ExtraBold.ufo
+  - Onest-Bold.ufo
+  - Onest-Medium.ufo
+  - Onest-Regular.ufo
+  - Onest-Light.ufo
+  - Onest-Thin.ufo
 
 familyName: Onest
 outputDir: "../fonts"
